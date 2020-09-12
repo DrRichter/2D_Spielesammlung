@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import com.manni.snake.*;
 
 public class Gamemanager extends JFrame {
 
@@ -77,7 +78,13 @@ public class Gamemanager extends JFrame {
                 selectedGameIndex = gameSelectionJComboBox.getSelectedIndex();
                 switch (selectedGameIndex) {
                     case 0:
-                        System.out.println("Es wurde Snake gewählt");
+                        EventQueue.invokeLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Snake snakeGame = new Snake();
+                                //snakeGame.setVisible(true);
+                            }
+                        });
                         break;
                     default:
                         System.out.println("Mehr Spiele folgen bald");
