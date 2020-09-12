@@ -13,11 +13,12 @@ public class Changelog extends JFrame {
 
         //Label
         JLabel lb_changelog = new JLabel("Changelog");
+        JLabel lb_changelog_20200912 = new JLabel("12.09.2020 --> Fertige Implemetierung von Snake");
 
         //Layout
         Container pane = getContentPane();
-        pane.setLayout(new BoxLayout(pane, BoxLayout.X_AXIS));
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
 
-        pane.add(lb_changelog);
+        pane.add(lb_changelog_20200912);
     }
 }

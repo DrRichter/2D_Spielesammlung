@@ -8,8 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Snake extends JPanel implements ActionListener {
-    private int width = 600;
-    private int height = 600;
+    private int width = 300;
+    private int height = 300;
 
     private Image apple;
     private Image head;
@@ -24,53 +24,106 @@ public class Snake extends JPanel implements ActionListener {
     private int apple_y;
     boolean running = true;
 
-    public static int direction;
+    public static int direction = 1;
 
     private Timer t;
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                Snake sk = new Snake();
-                sk.setVisible(true);
-            }
-        });
-    }
 
     public Snake() {
         addKeyListener(new SnakeListener());
         setPreferredSize(new Dimension(width, height));
         setFocusable(true);
         setBackground(Color.DARK_GRAY);
-        System.out.println("DEBUG");
 
-        ImageIcon icon_apple = new ImageIcon("apple.jpg");
-        ImageIcon icon_head = new ImageIcon("head.png");
-        ImageIcon icon_tail =  new ImageIcon("tail.png");
+        ImageIcon icon_apple = new ImageIcon("src/com/manni/snake/resources/apple.png");
+        ImageIcon icon_head = new ImageIcon("src/com/manni/snake/resources/head.png");
+        ImageIcon icon_tail =  new ImageIcon("src/com/manni/snake/resources/tail.png");
 
         apple = icon_apple.getImage();
         head = icon_head.getImage();
         tail = icon_tail.getImage();
 
+        for (int i = 0; i < tail_amount; i++) {
+            snake_x[i] = 100 - i*10;
+            snake_y[i]= 50;
+        }
         running = true;
-        t = new Timer(200, this);
+        t = new Timer(300, this);
         t.start();
+        spawnApple();
+    }
+
+    private void spawnApple() {
+        int random = (int) (Math.random()*29);
+        apple_x = random * snake_witdh;
+        random = (int) (Math.random()*29);
+        apple_y = random * snake_witdh;
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (running){
+            checkApple();
+            checkDeath();
+            moveSnake();
+        }
         repaint();
     }
 
-    @Override
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        if(running){
-            g.drawImage(apple, apple_x,apple_y,this);
+    private void moveSnake() {
+        for (int i = tail_amount; i > 0; i--) {
+            snake_x[i] = snake_x[i-1];
+            snake_y[i] = snake_y[i-1];
+        }
 
-            for (int i = 1; i < tail_amount; i++) {
+        switch (direction){
+            case 0: //left
+                snake_x[0] -= snake_witdh;
+                break;
+            case 1: //right
+                snake_x[0] += snake_witdh;
+                break;
+            case 2: //up
+                snake_y[0] -= snake_witdh;
+                break;
+            case 3: //down
+                snake_y[0] += snake_witdh;
+        }
+    }
+
+    private void checkDeath() {
+        for (int i = tail_amount; i > 3; i--) {
+            if (snake_x[0] == snake_x[i] && snake_y[0] == snake_y[i]){
+                running = false;
+            }
+        }
+
+        if (snake_y[0] >= height || snake_x[0] >= width || snake_y[0] < 0 || snake_x[0] < 0){
+            running = false;
+        }
+        if (!running){
+            t.stop();
+        }
+    }
+
+    private void checkApple() {
+        if (snake_x[0] == apple_x && snake_y[0] == apple_y){
+            tail_amount++;
+            spawnApple();
+        }
+    }
+
+    @Override
+    public void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+        if(running)
+        {
+            g.drawImage(apple, apple_x, apple_y, this);
+
+            for(int i = 1; i < tail_amount; i++)
+            {
                 g.drawImage(tail, snake_x[i], snake_y[i], this);
             }
 
@@ -78,13 +131,14 @@ public class Snake extends JPanel implements ActionListener {
 
             Toolkit.getDefaultToolkit().sync();
         }
-        else {
+        else
+        {
             Font f = new Font("Calibri", Font.BOLD, 16);
             FontMetrics metrics = getFontMetrics(f);
 
-            g.setColor(Color.LIGHT_GRAY);
+            g.setColor(Color.lightGray);
             g.setFont(f);
-            g.drawString("Game Over - You died", (width - metrics.stringWidth("Game Over - You died")), height/2);
+            g.drawString("Game Over - Du bist gestorben!", (width - metrics.stringWidth("Game Over - Du bist gestorben!           ")), height/2);
         }
     }
 }

@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import com.manni.Main;
 import com.manni.snake.*;
 
 public class Gamemanager extends JFrame {
@@ -81,8 +83,8 @@ public class Gamemanager extends JFrame {
                         EventQueue.invokeLater(new Runnable() {
                             @Override
                             public void run() {
-                                //Snake snakeGame = new Snake();
-                                //snakeGame.setVisible(true);
+                                Gui snakeGui = new Gui();
+                                snakeGui.setVisible(true);
                             }
                         });
                         break;
