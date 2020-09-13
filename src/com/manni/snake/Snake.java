@@ -117,6 +117,12 @@ public class Snake extends JPanel implements ActionListener {
     @Override
     public void paintComponent(Graphics g)
     {
+        Font f = new Font("Calibri", Font.BOLD, 16);
+        FontMetrics metrics = getFontMetrics(f);
+
+        g.setColor(Color.lightGray);
+        g.setFont(f);
+
         super.paintComponent(g);
         if(running)
         {
@@ -129,15 +135,12 @@ public class Snake extends JPanel implements ActionListener {
 
             g.drawImage(head, snake_x[0], snake_y[0], this);
 
+            g.drawString("Länge = " +tail_amount, 0, height);
+
             Toolkit.getDefaultToolkit().sync();
         }
         else
         {
-            Font f = new Font("Calibri", Font.BOLD, 16);
-            FontMetrics metrics = getFontMetrics(f);
-
-            g.setColor(Color.lightGray);
-            g.setFont(f);
             g.drawString("Game Over - Du bist gestorben!", (width - metrics.stringWidth("Game Over - Du bist gestorben!           ")), height/2);
         }
     }
