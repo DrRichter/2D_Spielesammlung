@@ -39,7 +39,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         jTextField17 = new javax.swing.JTextField();
         jSlider7 = new javax.swing.JSlider();
         jButton7 = new javax.swing.JButton();
-        jTextField18 = new javax.swing.JTextField();
+        lb_Reaktor1_Kuelwasseranlage_Primaer_Status = new javax.swing.JTextField();
         jProgressBar5 = new javax.swing.JProgressBar();
         jPanel19 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         jTextField19 = new javax.swing.JTextField();
         jSlider8 = new javax.swing.JSlider();
         jButton8 = new javax.swing.JButton();
-        jTextField20 = new javax.swing.JTextField();
+        lb_Reaktor1_Kuelwasseranlage_Ersatz_Status = new javax.swing.JTextField();
         jProgressBar6 = new javax.swing.JProgressBar();
         jPanel20 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
@@ -81,7 +81,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         jTextField25 = new javax.swing.JTextField();
         jSlider10 = new javax.swing.JSlider();
         jButton10 = new javax.swing.JButton();
-        jTextField26 = new javax.swing.JTextField();
+        lb_Reaktor2_Kuelwasseranlage_Primaer_Status = new javax.swing.JTextField();
         jProgressBar7 = new javax.swing.JProgressBar();
         jPanel26 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
@@ -92,7 +92,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         jTextField27 = new javax.swing.JTextField();
         jSlider11 = new javax.swing.JSlider();
         jButton11 = new javax.swing.JButton();
-        jTextField28 = new javax.swing.JTextField();
+        lb_Reaktor2_Kuelwasseranlage_Ersatz_Status = new javax.swing.JTextField();
         jProgressBar8 = new javax.swing.JProgressBar();
         jPanel27 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
@@ -133,6 +133,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton10.setSelected(true);
         jRadioButton10.setText("AUS");
         jRadioButton10.setName(""); // NOI18N
         jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -164,11 +165,12 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
-        jTextField18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField18.setText("Betrieb");
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        lb_Reaktor1_Kuelwasseranlage_Primaer_Status.setEditable(false);
+        lb_Reaktor1_Kuelwasseranlage_Primaer_Status.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lb_Reaktor1_Kuelwasseranlage_Primaer_Status.setText("Aus");
+        lb_Reaktor1_Kuelwasseranlage_Primaer_Status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                lb_Reaktor1_Kuelwasseranlage_Primaer_StatusActionPerformed(evt);
             }
         });
 
@@ -184,7 +186,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                                                 .addGap(4, 4, 4)
                                                 .addComponent(jLabel30)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(lb_Reaktor1_Kuelwasseranlage_Primaer_Status, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel18Layout.createSequentialGroup()
                                                 .addContainerGap()
                                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,7 +216,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                         .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel30)
-                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lb_Reaktor1_Kuelwasseranlage_Primaer_Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel29)
@@ -244,6 +246,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton12.setSelected(true);
         jRadioButton12.setText("AUS");
         jRadioButton12.setName(""); // NOI18N
         jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -276,11 +279,12 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
-        jTextField20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField20.setText("Betrieb");
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        lb_Reaktor1_Kuelwasseranlage_Ersatz_Status.setEditable(false);
+        lb_Reaktor1_Kuelwasseranlage_Ersatz_Status.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lb_Reaktor1_Kuelwasseranlage_Ersatz_Status.setText("Aus");
+        lb_Reaktor1_Kuelwasseranlage_Ersatz_Status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                lb_Reaktor1_Kuelwasseranlage_Ersatz_StatusActionPerformed(evt);
             }
         });
 
@@ -296,7 +300,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                                                 .addGap(4, 4, 4)
                                                 .addComponent(jLabel33)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(lb_Reaktor1_Kuelwasseranlage_Ersatz_Status, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel19Layout.createSequentialGroup()
                                                 .addContainerGap()
                                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,7 +330,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                         .addGroup(jPanel19Layout.createSequentialGroup()
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel33)
-                                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lb_Reaktor1_Kuelwasseranlage_Ersatz_Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel32)
@@ -569,6 +573,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton14.setSelected(true);
         jRadioButton14.setText("AUS");
         jRadioButton14.setName(""); // NOI18N
         jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -600,11 +605,12 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
-        jTextField26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField26.setText("Betrieb");
-        jTextField26.addActionListener(new java.awt.event.ActionListener() {
+        lb_Reaktor2_Kuelwasseranlage_Primaer_Status.setEditable(false);
+        lb_Reaktor2_Kuelwasseranlage_Primaer_Status.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lb_Reaktor2_Kuelwasseranlage_Primaer_Status.setText("Aus");
+        lb_Reaktor2_Kuelwasseranlage_Primaer_Status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField26ActionPerformed(evt);
+                lb_Reaktor2_Kuelwasseranlage_Primaer_StatusActionPerformed(evt);
             }
         });
 
@@ -620,7 +626,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                                                 .addGap(4, 4, 4)
                                                 .addComponent(jLabel42)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(lb_Reaktor2_Kuelwasseranlage_Primaer_Status, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel25Layout.createSequentialGroup()
                                                 .addContainerGap()
                                                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -650,7 +656,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                         .addGroup(jPanel25Layout.createSequentialGroup()
                                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel42)
-                                        .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lb_Reaktor2_Kuelwasseranlage_Primaer_Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel41)
@@ -680,6 +686,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton16.setSelected(true);
         jRadioButton16.setText("AUS");
         jRadioButton16.setName(""); // NOI18N
         jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -712,11 +719,12 @@ public class AkwSimPanel extends javax.swing.JPanel {
             }
         });
 
-        jTextField28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField28.setText("Betrieb");
-        jTextField28.addActionListener(new java.awt.event.ActionListener() {
+        lb_Reaktor2_Kuelwasseranlage_Ersatz_Status.setEditable(false);
+        lb_Reaktor2_Kuelwasseranlage_Ersatz_Status.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lb_Reaktor2_Kuelwasseranlage_Ersatz_Status.setText("Aus");
+        lb_Reaktor2_Kuelwasseranlage_Ersatz_Status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField28ActionPerformed(evt);
+                lb_Reaktor2_Kuelwasseranlage_Ersatz_StatusActionPerformed(evt);
             }
         });
 
@@ -732,7 +740,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                                                 .addGap(4, 4, 4)
                                                 .addComponent(jLabel45)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(lb_Reaktor2_Kuelwasseranlage_Ersatz_Status, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel26Layout.createSequentialGroup()
                                                 .addContainerGap()
                                                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -762,7 +770,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
                         .addGroup(jPanel26Layout.createSequentialGroup()
                                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel45)
-                                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lb_Reaktor2_Kuelwasseranlage_Ersatz_Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel44)
@@ -1073,7 +1081,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }
 
-    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void lb_Reaktor2_Kuelwasseranlage_Ersatz_StatusActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -1093,7 +1101,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }
 
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void lb_Reaktor2_Kuelwasseranlage_Primaer_StatusActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -1129,7 +1137,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void lb_Reaktor1_Kuelwasseranlage_Ersatz_StatusActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -1149,7 +1157,7 @@ public class AkwSimPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void lb_Reaktor1_Kuelwasseranlage_Primaer_StatusActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -1245,20 +1253,20 @@ public class AkwSimPanel extends javax.swing.JPanel {
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField lb_Reaktor1_Kuelwasseranlage_Ersatz_Status;
+    private javax.swing.JTextField lb_Reaktor1_Kuelwasseranlage_Primaer_Status;
+    private javax.swing.JTextField lb_Reaktor2_Kuelwasseranlage_Ersatz_Status;
+    private javax.swing.JTextField lb_Reaktor2_Kuelwasseranlage_Primaer_Status;
     // End of variables declaration
 }
