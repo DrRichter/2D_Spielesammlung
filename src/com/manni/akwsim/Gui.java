@@ -13,8 +13,12 @@ public class Gui extends JFrame {
             @Override
             public void run() {
                 JFrame test = new JFrame();
-                test.setVisible(true);
+                test.setSize(1600,500);
+                test.setResizable(false);
+                test.setLocationRelativeTo(null);
                 test.add(new AkwSimPanel());
+                test.pack();
+                test.setVisible(true);
             }
         });
     }
